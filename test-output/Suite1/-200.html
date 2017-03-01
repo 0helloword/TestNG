@@ -1,0 +1,214 @@
+<html>
+<head>
+<title>TestNG:  -200</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>-200</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>9/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Feb 15 16:23:12 CST 2017</td>
+</tr>
+<tr><td>Total time:</td><td>39 seconds (39490 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='test1.p.Part4()'><b>Part4</b><br>Test class: test1.p<br>Parameters: 信息不足无法判断, 申请人不在此工作, 信息验证失败, 拒绝回答问题, RES02, 信息验证失败, 号码不属于直系家属, 信息验证失败, 信息验证失败, 号码不属于其他联系人, 信息验证失败</td>
+<td><div><pre>org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 13 milliseconds
+Build info: version: &apos;2.42.2&apos;, revision: &apos;6a6995d&apos;, time: &apos;2014-06-03 17:42:03&apos;
+System info: host: &apos;test-PC&apos;, ip: &apos;192.168.150.116&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_79&apos;
+Session ID: b8daca71-4ad4-47f9-a2a5-77ed2672a566
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=24.0}]
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
+	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:318)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:116)
+	at test1.p.Part4(p.java:275)
+Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Element is not currently visible and so may not be interacted with
+Build info: version: &apos;2.42.2&apos;, revision: &apos;6a6995d&apos;, time: &apos;2014-06-03 17:42:03&apos;
+System info: host: &apos;test-PC&apos;, ip: &apos;192.168.150.116&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_79&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.fxdriver.preconditions.visible(file:///D:/Users/test/AppData/Local/Temp/anonymous4264079157947701843webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:8791)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.checkPreconditions_(file:///D:/Users/test/AppData/Local/Temp/anonymous4264079157947701843webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:11438)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///D:/Users/test/AppData/Local/Temp/anonymous4264079157947701843webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:11455)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///D:/Users/test/AppData/Local/Temp/anonymous4264079157947701843webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:11460)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///D:/Users/test/AppData/Local/Temp/anonymous4264079157947701843webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:11402)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace20750271", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace20750271'><pre>org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
+Command duration or timeout: 13 milliseconds
+Build info: version: &apos;2.42.2&apos;, revision: &apos;6a6995d&apos;, time: &apos;2014-06-03 17:42:03&apos;
+System info: host: &apos;test-PC&apos;, ip: &apos;192.168.150.116&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_79&apos;
+Session ID: b8daca71-4ad4-47f9-a2a5-77ed2672a566
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, browserConnectionEnabled=true, webStorageEnabled=true, nativeEvents=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=24.0}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:204)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:156)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:599)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
+	at org.openqa.selenium.support.ui.Select.setSelected(Select.java:318)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:116)
+	at test1.p.Part4(p.java:275)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:335)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:330)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Element is not currently visible and so may not be interacted with
+Build info: version: &apos;2.42.2&apos;, revision: &apos;6a6995d&apos;, time: &apos;2014-06-03 17:42:03&apos;
+System info: host: &apos;test-PC&apos;, ip: &apos;192.168.150.116&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_79&apos;
+Driver info: driver.version: unknown
+	at &lt;anonymous class&gt;.fxdriver.preconditions.visible(file:///D:/Users/test/AppData/Local/Temp/anonymous4264079157947701843webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:8791)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.checkPreconditions_(file:///D:/Users/test/AppData/Local/Temp/anonymous4264079157947701843webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:11438)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///D:/Users/test/AppData/Local/Temp/anonymous4264079157947701843webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:11455)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///D:/Users/test/AppData/Local/Temp/anonymous4264079157947701843webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:11460)
+	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///D:/Users/test/AppData/Local/Temp/anonymous4264079157947701843webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:11402)
+</pre></div></td>
+<td>7</td>
+<td>test1.p@e107d9</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='test1.p.NCIIC_Check()'><b>NCIIC_Check</b><br>Test class: test1.p</td>
+<td></td>
+<td>2</td>
+<td>test1.p@e107d9</td></tr>
+<tr>
+<td title='test1.p.NCIIC_Pic()'><b>NCIIC_Pic</b><br>Test class: test1.p</td>
+<td></td>
+<td>2</td>
+<td>test1.p@e107d9</td></tr>
+<tr>
+<td title='test1.p.Part1()'><b>Part1</b><br>Test class: test1.p<br>Parameters: 信息一致，照片不一致, 照片不一致</td>
+<td></td>
+<td>2</td>
+<td>test1.p@e107d9</td></tr>
+<tr>
+<td title='test1.p.Part2()'><b>Part2</b><br>Test class: test1.p<br>Parameters: 欺诈嫌疑, 学信网不一致, 照片不一致</td>
+<td></td>
+<td>4</td>
+<td>test1.p@e107d9</td></tr>
+<tr>
+<td title='test1.p.Sell_Pic()'><b>Sell_Pic</b><br>Test class: test1.p</td>
+<td></td>
+<td>2</td>
+<td>test1.p@e107d9</td></tr>
+<tr>
+<td title='test1.p.SheBao()'><b>SheBao</b><br>Test class: test1.p</td>
+<td></td>
+<td>2</td>
+<td>test1.p@e107d9</td></tr>
+<tr>
+<td title='test1.p.check()'><b>check</b><br>Test class: test1.p</td>
+<td></td>
+<td>4</td>
+<td>test1.p@e107d9</td></tr>
+<tr>
+<td title='test1.p.login()'><b>login</b><br>Test class: test1.p<br>Parameters: http://123.57.56.45:7778/OC/index, 999111, 123456</td>
+<td></td>
+<td>9</td>
+<td>test1.p@e107d9</td></tr>
+<tr>
+<td title='test1.p.xuexin()'><b>xuexin</b><br>Test class: test1.p</td>
+<td></td>
+<td>2</td>
+<td>test1.p@e107d9</td></tr>
+</table><p>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="suite1">
+	<test name="3" enabled="true">
+		<parameter name="url" value="http://123.57.56.45:7778/OC/index" />
+		<parameter name="username" value="999111" />
+		<parameter name="password" value="123456" />
+		<parameter name="NCIIC" value="信息和照片均一致" />
+		<parameter name="NCIICp" value="照片一致" />
+		<parameter name="SheBao" value="无社保" />
+		<parameter name="XueXin" value="非学生" />
+		<parameter name="SellPic" value="无法判断" />
+		<parameter name="Check" value="RES01" />
+		<parameter name="Phone" value="验证结果无法分类" />
+		<parameter name="OfficeTelephone" value="占线/无人应答" />
+		<parameter name="FamilyPhone" value="信息不足无法判断" />		
+		<parameter name="Familytelephone" value="欺诈嫌疑" />
+		<parameter name="Otherphone" value="未填" />
+		<parameter name="ID5" value="获取新号码" />
+<classes>
+			<class name="test1.p">
+				<methods>
+					<include name="login" />
+					<include name="check" />
+					<include name="NCIIC_Check" />
+					<include name="NCIIC_Pic" />
+					<include name="Part1" />
+					<include name="SheBao" />
+					<include name="xuexin" />
+					<include name="Sell_Pic" />
+					<include name="Part2" />
+					<include name="Part4" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
+

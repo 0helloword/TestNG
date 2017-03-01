@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [suite1]">
+  <parameter name="Otherphone" value="信息验证失败"/>
+  <parameter name="FamilyPhone1" value="号码不属于直系家属"/>
+  <parameter name="Check" value="RES02"/>
+  <parameter name="Phone" value="信息验证失败"/>
+  <parameter name="Phone1" value="拒绝回答问题"/>
+  <parameter name="Familytelephone" value="信息验证失败"/>
+  <parameter name="NCIIC" value="信息一致，照片不一致"/>
+  <parameter name="XunXin" value="学信网不一致"/>
+  <parameter name="Otherphone1" value="号码不属于其他联系人"/>
+  <parameter name="OfficeTelephone" value="信息不足无法判断"/>
+  <parameter name="NCIICp" value="照片不一致"/>
+  <parameter name="password" value="123456"/>
+  <parameter name="url" value="http://123.57.56.45:7778/OC/index"/>
+  <parameter name="username" value="999111"/>
+  <parameter name="FamilyPhone" value="信息验证失败"/>
+  <parameter name="SheBao" value="欺诈嫌疑"/>
+  <parameter name="OfficeTelephone1" value="申请人不在此工作"/>
+  <parameter name="ID5" value="信息验证失败"/>
+  <parameter name="SellPic" value="照片不一致"/>
+  <test name="-200(failed)">
+    <parameter name="Otherphone" value="信息验证失败"/>
+    <parameter name="FamilyPhone1" value="号码不属于直系家属"/>
+    <parameter name="Check" value="RES02"/>
+    <parameter name="Phone" value="信息验证失败"/>
+    <parameter name="Phone1" value="拒绝回答问题"/>
+    <parameter name="Familytelephone" value="信息验证失败"/>
+    <parameter name="NCIIC" value="信息一致，照片不一致"/>
+    <parameter name="XunXin" value="学信网不一致"/>
+    <parameter name="Otherphone1" value="号码不属于其他联系人"/>
+    <parameter name="OfficeTelephone" value="信息不足无法判断"/>
+    <parameter name="NCIICp" value="照片不一致"/>
+    <parameter name="password" value="123456"/>
+    <parameter name="url" value="http://123.57.56.45:7778/OC/index"/>
+    <parameter name="FamilyPhone" value="信息验证失败"/>
+    <parameter name="username" value="999111"/>
+    <parameter name="OfficeTelephone1" value="申请人不在此工作"/>
+    <parameter name="SheBao" value="欺诈嫌疑"/>
+    <parameter name="ID5" value="信息验证失败"/>
+    <parameter name="SellPic" value="照片不一致"/>
+    <classes>
+      <class name="test1.p">
+        <methods>
+          <include name="Part4" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- test1.p -->
+    </classes>
+  </test> <!-- -200(failed) -->
+</suite> <!-- Failed suite [suite1] -->
