@@ -23,7 +23,7 @@
 		<parameter name="Otherphone1" value="号码不属于其他联系人" />
 		<parameter name="ID5" value="信息验证失败" />
 		<classes>
-			<class name="test1.p">
+			<class name="test1.Oc1">
 				<methods>
 					<include name="login" />
 					<include name="check" />

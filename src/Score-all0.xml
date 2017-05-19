@@ -2,10 +2,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
 <suite name="suite1">
-	<test name="3" enabled="true">
+	<test name="login" enabled="true">
 		<parameter name="url" value="http://123.57.56.45:7778/OC/index" />
 		<parameter name="username" value="999111" />
 		<parameter name="password" value="123456" />
+		
+		
+		
+		
 		<parameter name="NCIIC" value="信息和照片均一致" />
 		<parameter name="NCIICp" value="照片一致" />
 		<parameter name="SheBao" value="无社保" />
@@ -18,22 +22,13 @@
 		<parameter name="Familytelephone" value="欺诈嫌疑" />
 		<parameter name="Otherphone" value="未填" />
 		<parameter name="ID5" value="获取新号码" />
-<classes>
-			<class name="test1.p">
-				<methods>
-					<include name="login" />
-					<include name="check" />
-					<include name="NCIIC_Check" />
-					<include name="NCIIC_Pic" />
-					<include name="Part1" />
-					<include name="SheBao" />
-					<include name="xuexin" />
-					<include name="Sell_Pic" />
-					<include name="Part2" />
-					<include name="Part4" />
-				</methods>
-			</class>
-		</classes>
+	<classes>
+			
+			
+				<class name="oc.octest"/>
+	</classes>				
+				
+		
 	</test>
 </suite>
 

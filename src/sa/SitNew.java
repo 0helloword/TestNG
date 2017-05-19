@@ -1,17 +1,20 @@
 //sit结合excel参数文件运行，excel路径F:\test\workspace\9f\data，参数在ExcelTest.xls中修改
 //只能在eclipse中运行，因无main函数，无法生产可执行文件运行
 
-package test1;
+package sa;
 
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import test1.ExcelData;
 
 	
 public class SitNew {

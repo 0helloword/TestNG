@@ -1,7 +1,7 @@
 //sit仅在eclipse中运行，相关参数只能在代码中直接修改
 //可结合Maintest生成可执行文件，但是参数固定
 
-package test1;
+package sa;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -43,6 +43,7 @@ public class SIT {
 	    new Select(driver.findElement(By.name("goodsReqs[0].cargoType"))).selectByVisibleText("手机");
 	    Thread.sleep(1000);
 	    new Select(driver.findElement(By.id("commodityClass_0"))).selectByVisibleText("手机配件");
+
 	    Thread.sleep(1000);
 	    driver.findElement(By.id("commodityName_0")).clear();
 	    driver.findElement(By.id("commodityName_0")).sendKeys("充电器");
@@ -70,16 +71,16 @@ public class SIT {
 	    //贷款信息
 	    Thread.sleep(2000);
 	    driver.findElement(By.id("customerName")).clear();
-	    driver.findElement(By.id("customerName")).sendKeys("黄豆");//修改数据--用户姓
+	    driver.findElement(By.id("customerName")).sendKeys("黄看豆");//修改数据--用户姓
 	    driver.findElement(By.id("cardId")).clear();
-	    driver.findElement(By.id("cardId")).sendKeys("330624199901010654");//修改数据--身份证号
+	    driver.findElement(By.id("cardId")).sendKeys("411203199106111576");//修改数据--身份证号
 	    driver.findElement(By.id("mobile")).clear();
-	    driver.findElement(By.id("mobile")).sendKeys("18178884485");//修改数据--电话号码
+	    driver.findElement(By.id("mobile")).sendKeys("18178848485");//修改数据--电话号码
 	    new Select(driver.findElement(By.id("repaymentType"))).selectByVisibleText("银行代扣");
 	    Thread.sleep(2000);
 	    new Select(driver.findElement(By.id("repaymentBank"))).selectByVisibleText("中国工商银行");
 	    driver.findElement(By.id("repaymentAcc")).clear();
-	    driver.findElement(By.id("repaymentAcc")).sendKeys("4444222178423455");//修改数据--银行账号
+	    driver.findElement(By.id("repaymentAcc")).sendKeys("44442789978423455");//修改数据--银行账号
 	    Thread.sleep(2000);
 	    new Select(driver.findElement(By.id("province"))).selectByVisibleText("广东省");
 	    Thread.sleep(1000);
@@ -130,9 +131,9 @@ public class SIT {
 	    driver.findElement(By.className("today")).click();
 	    new Select(driver.findElement(By.id("degree"))).selectByVisibleText("大本");
 	    driver.findElement(By.id("emaill")).clear();
-	    driver.findElement(By.id("emaill")).sendKeys("538445698@qq.com");//修改郵箱
+	    driver.findElement(By.id("emaill")).sendKeys("5315698@qq.com");//修改郵箱
 	    driver.findElement(By.name("qqCode")).clear();
-	    driver.findElement(By.name("qqCode")).sendKeys("51144439995");//修改QQ号码
+	    driver.findElement(By.name("qqCode")).sendKeys("5114739995");//修改QQ号码
 	    new Select(driver.findElement(By.name("marry"))).selectByVisibleText("未婚");
 	    new Select(driver.findElement(By.name("liveCondition"))).selectByVisibleText("自建/购买房产");
 	    Thread.sleep(1000);
@@ -200,7 +201,7 @@ public class SIT {
 	    driver.findElement(By.name("contractInfos[0].contractName")).clear();
 	    driver.findElement(By.name("contractInfos[0].contractName")).sendKeys("陈浩明");
 	    driver.findElement(By.name("contractInfos[0].contractPhone")).clear();
-	    driver.findElement(By.name("contractInfos[0].contractPhone")).sendKeys("15254411545");//修改家庭联系人号码
+	    driver.findElement(By.name("contractInfos[0].contractPhone")).sendKeys("15257891545");//修改家庭联系人号码
 	    driver.findElement(By.name("contractInfos[0].contactWeixin")).clear();
 	    driver.findElement(By.name("contractInfos[0].contactWeixin")).sendKeys("526878956");
 	    Thread.sleep(2000);
@@ -208,7 +209,7 @@ public class SIT {
 	    driver.findElement(By.name("contractInfos[1].contractName")).clear();
 	    driver.findElement(By.name("contractInfos[1].contractName")).sendKeys("罗大佑");
 	    driver.findElement(By.name("contractInfos[1].contractPhone")).clear();
-	    driver.findElement(By.name("contractInfos[1].contractPhone")).sendKeys("18947444456");//修改非家庭联系人号码
+	    driver.findElement(By.name("contractInfos[1].contractPhone")).sendKeys("18945894456");//修改非家庭联系人号码
 	    driver.findElement(By.name("contractInfos[1].contactWeixin")).clear();
 	    driver.findElement(By.name("contractInfos[1].contactWeixin")).sendKeys("854697455");
 	    Thread.sleep(2000);

@@ -1,15 +1,14 @@
-package test1;
+package oc;
 
 //OC人工初步审核，从xml获取参数
 //直接在eclipse左侧列表选择xml文件运行
 //暂未解决问题：第四个页面因滚动条原因导致无法定位元素
+//用于验证审核二次评分流程
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -18,11 +17,14 @@ import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class Oc {
+
+public class oc_check {
 	WebDriver driver;
 
+	
 	@Parameters({ "url", "username", "password" })
 	@Test(priority = 1)
+	
 	public void login(String url, String username, String password)
 			throws InterruptedException {
 		driver = new FirefoxDriver();
@@ -34,7 +36,9 @@ public class Oc {
 		driver.findElement(By.id("loginButton")).click(); // 点击登录
 	}
 
-	@Test(priority = 2)
+
+	
+	@Test(priority =2)
 	public void check() throws InterruptedException {
 		//Thread.sleep(3000);
 		//driver.findElement(By.cssSelector("button.ui-dialog-close")).click();// 关闭软电话
@@ -260,8 +264,8 @@ public class Oc {
 					System.out.println("打分卡分数为"+score1+"下拉框个数为7");
 					Thread.sleep(2000);
 					//控制滚动栏
-					driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div[2]/div[2]/div/div[2]/div[2]/div/div[2]/form/div/div[2]")).sendKeys(Keys.UP);
-					Thread.sleep(2000);
+					//driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/div[2]/div[2]/div/div[2]/div[2]/div/div[2]/form/div/div[2]")).sendKeys(Keys.UP);
+					//Thread.sleep(2000);
 					new Select(driver.findElement(By.name("MCRE02"))).selectByVisibleText(OfficeTelephone);//申请人办公电话核实:
 					Thread.sleep(1000);
 					  new Select(driver.findElement(By.name("MCRG07"))).selectByVisibleText(Check);//主观判断结果:

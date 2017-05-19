@@ -1,30 +1,37 @@
-//rel仅在eclipse中运行，相关参数只能在代码中直接修改
+//uat仅在eclipse中运行，相关参数只能在代码中直接修改
 //可结合Maintest生成可执行文件，但是参数固定
 
-package test1;
+package sa;
 
+//import org.openqa.jetty.jetty.servlet.XMLConfiguration;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
+//import org.seleniumhq.jetty7.webapp.Configuration;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 
-public class REL {
+public class UAT {
 	WebDriver driver;
+
+
+	      // Configuration config = new XMLConfiguration("/9f/src/test1/config.xml");
+	     //  String name = config.getString("Account.name");
+	    
 	
 	@BeforeTest
 	  public void beforeTest() {
-		
 			driver = new FirefoxDriver();
-			driver.get("http://123.57.157.56:20080/cnsa/initLogin");
+			driver.get("http://123.57.234.78:9080/cnsa/initLogin");
 			driver.manage().window().maximize();// 窗口最大化
 	  }
 	
 	@Test(priority=1)
 	public void testlogin() throws Exception {
-		driver.findElement(By.id("username")).sendKeys("907736");// 输入登录用户名
-		driver.findElement(By.id("password")).sendKeys("cn123789");// 输入登录密码
+		//properties.getProperty(key);
+		driver.findElement(By.id("username")).sendKeys("998866");// 输入登录用户名
+		driver.findElement(By.id("password")).sendKeys("cyj123");// 输入登录密码
 		Thread.sleep(2000);
 		driver.findElement(By.id("loginButton")).click(); // 点击登录
 		Thread.sleep(5000);// 等待时间单位为毫秒
@@ -35,11 +42,11 @@ public class REL {
 	public void neworder1() throws InterruptedException{
 		//新增申请
 		driver.findElement(By.linkText("新增工单")).click();
-	    new Select(driver.findElement(By.id("storeId"))).selectByVisibleText("瓯海谷米数码");
+	    new Select(driver.findElement(By.id("storeId"))).selectByVisibleText("门店test2");
 	    Thread.sleep(1000);
 	    new Select(driver.findElement(By.id("careerType"))).selectByVisibleText("在职人员");
 	    Thread.sleep(1000);
-	    new Select(driver.findElement(By.id("productSeriesId"))).selectByVisibleText("手机");
+	    new Select(driver.findElement(By.id("productSeriesId"))).selectByVisibleText("手机代");
 	    Thread.sleep(1000);
 	    new Select(driver.findElement(By.name("goodsReqs[0].cargoType"))).selectByVisibleText("手机");
 	    Thread.sleep(1000);
@@ -71,34 +78,34 @@ public class REL {
 	    //贷款信息
 	    Thread.sleep(2000);
 	    driver.findElement(By.id("customerName")).clear();
-	    driver.findElement(By.id("customerName")).sendKeys("陈的丹");//修改数据--用户姓
+	    driver.findElement(By.id("customerName")).sendKeys("陈单独");//修改数据--用户姓
 	    driver.findElement(By.id("cardId")).clear();
-	    driver.findElement(By.id("cardId")).sendKeys("31010119930101199x");//修改数据--身份证号
+	    driver.findElement(By.id("cardId")).sendKeys("430602198301264213");//修改数据--身份证号
 	    driver.findElement(By.id("mobile")).clear();
-	    driver.findElement(By.id("mobile")).sendKeys("18857824580");//修改数据--电话号码
+	    driver.findElement(By.id("mobile")).sendKeys("18145953385");//修改数据--电话号码
 	    new Select(driver.findElement(By.id("repaymentType"))).selectByVisibleText("银行代扣");
 	    Thread.sleep(2000);
 	    new Select(driver.findElement(By.id("repaymentBank"))).selectByVisibleText("中国工商银行");
 	    driver.findElement(By.id("repaymentAcc")).clear();
-	    driver.findElement(By.id("repaymentAcc")).sendKeys("44321975322255500");//修改数据--银行账号
-	  Thread.sleep(2000);
+	    driver.findElement(By.id("repaymentAcc")).sendKeys("4432954492423455");//修改数据--银行账号
+	    Thread.sleep(2000);
 	    new Select(driver.findElement(By.id("province"))).selectByVisibleText("广东省");
 	    Thread.sleep(1000);
 	    new Select(driver.findElement(By.id("city"))).selectByVisibleText("深圳市");
 	    driver.findElement(By.id("bankTel")).clear();
 	    driver.findElement(By.id("bankTel")).sendKeys("13347221234");
 	    driver.findElement(By.cssSelector("button.btn.blue-madison")).click();
-	  Thread.sleep(2000);
+	    Thread.sleep(2000);
 	}
 	@Test(priority=4)
 	public void neworder3() throws InterruptedException{
-	    //上传资料                                                             
-		Thread.sleep(3000);                       
-	  	String order=driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[3]/form/div/div[2]/div/div/div/div/p/strong")).getText();
+	    //上传资料
+		Thread.sleep(3000);
+	  	String order=driver.findElement(By.xpath("/html/body/div[3]/div[2]/div/form/div/div[2]/div/div/div/div/p/strong")).getText();
 	  	System.out.print("该订单编号为:"+order+"\n\n");
-	  Thread.sleep(2000);
+	    Thread.sleep(2000);
 	    String s1=driver.findElement(By.xpath("//input[9]")).getAttribute("id");
-	    System.out.print(s1+"\n");//获取第一个上传按键的id  file_0_35440869_1000001_72   file_0_10855339_1000001_11
+	    System.out.print(s1+"\n");//获取第一个上传按键的id  file_0_35440869_1000001_72
 	    String ss1=s1.substring(0,16);//获取file_0_35440869_
 	    //System.out.print(ss1+"\n");
 	    int ss2=Integer.parseInt(s1.substring(16, 23));//获取1000001
@@ -126,21 +133,21 @@ public class REL {
 		Thread.sleep(3000);
 	    driver.findElement(By.name("issuingOrgan")).clear();
 	    driver.findElement(By.name("issuingOrgan")).sendKeys("深圳公安局");
-	  Thread.sleep(2000);
+	    Thread.sleep(2000);
 	    driver.findElement(By.id("idCardValidity")).click();
 	    driver.findElement(By.xpath("/html/body/div[6]/div/table/tfoot/tr/th")).click();
 	    new Select(driver.findElement(By.id("degree"))).selectByVisibleText("大本");
 	    driver.findElement(By.id("emaill")).clear();
-	    driver.findElement(By.id("emaill")).sendKeys("555675228@qq.com");//修改郵箱
+	    driver.findElement(By.id("emaill")).sendKeys("53229284338@qq.com");//修改郵箱
 	    driver.findElement(By.name("qqCode")).clear();
-	    driver.findElement(By.name("qqCode")).sendKeys("5221728562995");//修改QQ号码
+	    driver.findElement(By.name("qqCode")).sendKeys("56135419395");//修改QQ号码
 	    new Select(driver.findElement(By.name("marry"))).selectByVisibleText("未婚");
 	    new Select(driver.findElement(By.name("liveCondition"))).selectByVisibleText("自建/购买房产");
-	  Thread.sleep(1000);
+	    Thread.sleep(1000);
 	    new Select(driver.findElement(By.id("householdProv"))).selectByVisibleText("广东省");
-	  Thread.sleep(1000);
+	    Thread.sleep(1000);
 	    new Select(driver.findElement(By.id("householdCity"))).selectByVisibleText("深圳市");
-	  Thread.sleep(1000);
+	    Thread.sleep(1000);
 	    new Select(driver.findElement(By.id("householdTown"))).selectByVisibleText("罗湖区");
 	    driver.findElement(By.id("householdZhen")).clear();
 	    driver.findElement(By.id("householdZhen")).sendKeys("湖贝新村");
@@ -150,24 +157,10 @@ public class REL {
 	    driver.findElement(By.id("householdRidge")).sendKeys("10栋");
 	    driver.findElement(By.id("householdHome")).clear();
 	    driver.findElement(By.id("householdHome")).sendKeys("101");
-	    new Select(driver.findElement(By.id("addreRegist"))).selectByVisibleText("不同");
+	    new Select(driver.findElement(By.id("addreRegist"))).selectByVisibleText("相同");
 	    Thread.sleep(1000);
-	    new Select(driver.findElement(By.id("liveProv"))).selectByVisibleText("江苏省");
-	  Thread.sleep(1000);
-	    new Select(driver.findElement(By.id("liveCity"))).selectByVisibleText("苏州市");
-	  Thread.sleep(1000);
-	    new Select(driver.findElement(By.id("liveTown"))).selectByVisibleText("平江区");
-	    driver.findElement(By.id("liveZhen")).clear();
-	    driver.findElement(By.id("liveZhen")).sendKeys("湖贝新村");
-	    driver.findElement(By.id("liveStr")).clear();
-	    driver.findElement(By.id("liveStr")).sendKeys("文锦路");
-	    driver.findElement(By.id("liveRidge")).clear();
-	    driver.findElement(By.id("liveRidge")).sendKeys("10栋");
-	    driver.findElement(By.id("liveHome")).clear();
-	    driver.findElement(By.id("liveHome")).sendKeys("101");
-	  Thread.sleep(1000);
 	    new Select(driver.findElement(By.name("postState"))).selectByVisibleText("与现住址相同");
-	  Thread.sleep(2000);
+	    Thread.sleep(2000);
 	    //收入信息
 	    driver.findElement(By.id("monthlyIncome")).clear();
 	    driver.findElement(By.id("monthlyIncome")).sendKeys("5000");
@@ -175,32 +168,32 @@ public class REL {
 	    driver.findElement(By.id("familyIncome")).sendKeys("6000");
 	    driver.findElement(By.id("monthlySpending")).clear();
 	    driver.findElement(By.id("monthlySpending")).sendKeys("1000");
-	  Thread.sleep(2000);
+	    Thread.sleep(2000);
 	    //职业信息
 	    driver.findElement(By.id("firstWorktime")).click();//定位下拉列表中的年份,为了页面不将年份弹窗挡住，先填写该项
 	    driver.findElement(By.xpath("/html/body/div[6]/div[3]/table/tbody/tr/td/span[5]")).click();
-	  Thread.sleep(2000);
+	    Thread.sleep(2000);
 	    new Select(driver.findElement(By.id("industry"))).selectByVisibleText("事业单位、公共设施、医疗卫生、社会保障和社会福利业");
 	    driver.findElement(By.name("unitname")).clear();
 	    driver.findElement(By.name("unitname")).sendKeys("测试公司");
 	    driver.findElement(By.name("department")).clear();
 	    driver.findElement(By.name("department")).sendKeys("测试部");
-	  Thread.sleep(2000);
+	    Thread.sleep(2000);
 	    new Select(driver.findElement(By.id("industryType"))).selectByVisibleText("公共设施管理业");
 	    new Select(driver.findElement(By.id("careerType"))).selectByVisibleText("一般医务行政人员、一般医师及护士、病理检查员");
 	    driver.findElement(By.name("unitPhone")).clear();
 	    driver.findElement(By.name("unitPhone")).sendKeys("07557895656");
-	  Thread.sleep(2000);
+	    Thread.sleep(2000);
 	    new Select(driver.findElement(By.name("duty"))).selectByVisibleText("高层管理人员/总监以上/局级以上干部");
-	  Thread.sleep(2000);
+	    Thread.sleep(2000);
 	    driver.findElement(By.id("unitWorktime")).clear();
 	    driver.findElement(By.id("unitWorktime")).sendKeys("10");
-	  Thread.sleep(2000);
-	    new Select(driver.findElement(By.id("unitAddre"))).selectByVisibleText("江苏省");
-	  Thread.sleep(1000);
-	    new Select(driver.findElement(By.id("unitCity"))).selectByVisibleText("苏州市");
-	  Thread.sleep(1000);
-	    new Select(driver.findElement(By.id("unitTown"))).selectByVisibleText("平江区");
+	    Thread.sleep(2000);
+	    new Select(driver.findElement(By.id("unitAddre"))).selectByVisibleText("广东省");
+	    Thread.sleep(1000);
+	    new Select(driver.findElement(By.id("unitCity"))).selectByVisibleText("深圳市");
+	    Thread.sleep(1000);
+	    new Select(driver.findElement(By.id("unitTown"))).selectByVisibleText("南山区");
 	    driver.findElement(By.id("unitZhen")).clear();
 	    driver.findElement(By.id("unitZhen")).sendKeys("茶馆村");
 	    driver.findElement(By.name("unitRidge")).clear();
@@ -209,39 +202,39 @@ public class REL {
 	    driver.findElement(By.name("unitStr")).sendKeys("1栋");
 	    driver.findElement(By.name("unitHome")).clear();
 	    driver.findElement(By.name("unitHome")).sendKeys("101");
-	  Thread.sleep(2000);
+	    Thread.sleep(2000);
 	    //联系人信息
 	    new Select(driver.findElement(By.id("contractType_0"))).selectByVisibleText("父亲");
 	    driver.findElement(By.name("contractInfos[0].contractName")).clear();
 	    driver.findElement(By.name("contractInfos[0].contractName")).sendKeys("陈浩明");
 	    driver.findElement(By.name("contractInfos[0].contractPhone")).clear();
-	    driver.findElement(By.name("contractInfos[0].contractPhone")).sendKeys("19222719500");//修改家庭联系人号码
+	    driver.findElement(By.name("contractInfos[0].contractPhone")).sendKeys("13354213545");//修改家庭联系人号码
 	    driver.findElement(By.name("contractInfos[0].contactWeixin")).clear();
-	    driver.findElement(By.name("contractInfos[0].contactWeixin")).sendKeys("599878956");
-	  Thread.sleep(2000);
+	    driver.findElement(By.name("contractInfos[0].contactWeixin")).sendKeys("526978956");
+	    Thread.sleep(2000);
 	    new Select(driver.findElement(By.id("contractType_1"))).selectByVisibleText("亲属");
 	    driver.findElement(By.name("contractInfos[1].contractName")).clear();
 	    driver.findElement(By.name("contractInfos[1].contractName")).sendKeys("罗大佑");
 	    driver.findElement(By.name("contractInfos[1].contractPhone")).clear();
-	    driver.findElement(By.name("contractInfos[1].contractPhone")).sendKeys("189222474456");//修改非家庭联系人号码
+	    driver.findElement(By.name("contractInfos[1].contractPhone")).sendKeys("18919434456");//修改非家庭联系人号码
 	    driver.findElement(By.name("contractInfos[1].contactWeixin")).clear();
 	    driver.findElement(By.name("contractInfos[1].contactWeixin")).sendKeys("854697455");
-	  Thread.sleep(2000);
+	    Thread.sleep(2000);
 	    //协审信息
 	    driver.findElement(By.name("checkApplyInfo")).click();
 	    driver.findElement(By.name("mattersNeed")).click();
 	    driver.findElement(By.name("checkMobile")).click();
 	    driver.findElement(By.name("checkTel")).click();
-	  Thread.sleep(2000);
+	    Thread.sleep(2000);
 	    //其他信息
 	    new Select(driver.findElement(By.name("accompany"))).selectByVisibleText("0");
 	    driver.findElement(By.name("accApply")).click();
-	  Thread.sleep(1000);
+	    Thread.sleep(1000);
 	    driver.findElement(By.name("accName")).clear();
 	    driver.findElement(By.name("accName")).sendKeys("陪同人");
 	    driver.findElement(By.name("accMobile")).clear();
-	    driver.findElement(By.name("accMobile")).sendKeys("17895645527");
-	  Thread.sleep(1000);
+	    driver.findElement(By.name("accMobile")).sendKeys("17891645527");
+	    Thread.sleep(1000);
 	    driver.findElement(By.name("mobileBrand")).clear();
 	    driver.findElement(By.name("mobileBrand")).sendKeys("华为");
 	    driver.findElement(By.name("stortFamKm")).clear();
@@ -253,10 +246,10 @@ public class REL {
 	    //验证信息
 	    new Select(driver.findElement(By.name("userEvaluate"))).selectByVisibleText("1");
 	    driver.findElement(By.id("userEvaluateCode")).clear();
-	  Thread.sleep(2000);
-	    //driver.findElement(By.id("userEvaluateCode")).sendKeys("cn123789");//根据个人登录密码填写
-	   //driver.findElement(By.id("save_but")).click();
-	    //driver.findElement(By.id("draft_but")).click();//保存草稿
+	    Thread.sleep(2000);
+	    driver.findElement(By.id("userEvaluateCode")).sendKeys("cyj111");//根据个人登录密码填写
+	    //driver.findElement(By.id("save_but")).click();//提交
+	    driver.findElement(By.id("draft_but")).click();//保存草稿
 	}
 	
 	

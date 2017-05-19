@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="suite1">
+
+<test name="1">
+
+  		<parameter name="url" value="http://123.57.56.45:7778/OC/index" />
+		<parameter name="username" value="999111" />
+		<parameter name="password" value="123456" />
+<classes>  
+   
+    <class name="oc.oc_login"/> 
+   
+    
+     
+  </classes> 
+
+
+
+
+</test>
+</suite>
