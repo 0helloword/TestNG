@@ -3,16 +3,16 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="test1.SitNew">
+      <class name="sa.UAT">
         <methods>
-          <include name="prmap"/>
           <include name="neworder4"/>
-          <include name="neworder2"/>
+          <include name="beforeTest"/>
           <include name="testlogin"/>
           <include name="neworder3"/>
+          <include name="neworder2"/>
           <include name="neworder1"/>
         </methods>
-      </class> <!-- test1.SitNew -->
+      </class> <!-- sa.UAT -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
